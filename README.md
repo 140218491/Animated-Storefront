@@ -68,8 +68,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Creating an engaging and dynamic storefront can help attract and retain customers. This animated storefront project uses HTML, CSS, and JavaScript to create an interactive and visually appealing user experience.
 
 Here's why this project stands out:

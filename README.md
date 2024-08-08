@@ -19,26 +19,19 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/your_username/animated-storefront">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
   <h3 align="center">Animated Storefront</h3>
 
   <p align="center">
     An engaging and dynamic animated storefront!
     <br />
-    <a href="https://github.com/your_username/animated-storefront"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/140218491/animated-storefront"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/your_username/animated-storefront">View Demo</a>
+    <a href="https://github.com/140218491/animated-storefront">View Demo</a>
     ·
-    <a href="https://github.com/your_username/animated-storefront/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/140218491/animated-storefront/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/your_username/animated-storefront/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/140218491/animated-storefront/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 

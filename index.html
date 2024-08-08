@@ -5,119 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Storefront</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-
-        .navbar {
-            transition: background-color 0.5s;
-        }
-
-        .navbar.scrolled {
-            background-color: #333 !important;
-        }
-
-        .animated-section {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .animated-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        #home {
-            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-            min-height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            animation: backgroundAnimation 10s infinite alternate;
-        }
-
-        @keyframes backgroundAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
-        #products {
-            background-color: #f9f9f9;
-            padding: 60px 20px;
-            animation: colorChange 10s infinite alternate;
-        }
-
-        @keyframes colorChange {
-            0% {
-                background-color: #f9f9f9;
-            }
-            100% {
-                background-color: #e9e9e9;
-            }
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            transition: transform 0.3s;
-        }
-
-        #contact {
-            background: url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
-            min-height: 300px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            animation: moveBackground 15s infinite linear;
-        }
-
-        @keyframes moveBackground {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: 100% 100%;
-            }
-        }
-
-        .line-animation {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .line-animation::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: #007bff;
-            animation: lineMove 5s infinite linear;
-        }
-
-        @keyframes lineMove {
-            0% {
-                left: -100%;
-            }
-            100% {
-                left: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
         <a class="navbar-brand" href="#">Storefront</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -137,12 +29,12 @@
         </div>
     </nav>
 
-    <div id="home" class="container-fluid p-5 text-center animated-section">
-        <h1>Welcome to Our Store</h1>
-        <p class="line-animation">Your one-stop shop for all your needs</p>
-    </div>
+    <header id="home" class="container-fluid p-5 text-center animated-section">
+        <h1 class="display-4">Welcome to Our Store</h1>
+        <p class="line-animation mt-3">Discover our amazing products and deals</p>
+    </header>
 
-    <div id="products" class="container my-5 animated-section">
+    <section id="products" class="container my-5 animated-section">
         <h2 class="text-center mb-4">Our Products</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
@@ -173,44 +65,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="contact" class="container-fluid p-5 animated-section">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for any queries</p>
-    </div>
+    <section id="contact" class="container-fluid p-5 animated-section">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">Get in touch with us for any queries</p>
+    </section>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.animated-section');
-            const navbar = document.querySelector('.navbar');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
